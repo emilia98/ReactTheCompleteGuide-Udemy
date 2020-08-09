@@ -14,6 +14,8 @@ import SimpleComponentCode from './components/simple-component/SimpleComponentCo
 import UnderstandingJSXCode from './components/understanding-jsx/UnderstandingJSXCode';
 import UnderstandingJSX from './components/understanding-jsx/UnderstandingJSX';
 import JSXRestrictions from './components/jsx-restrictions/JSXRestrictions';
+import FunctionalComponent from './components/functional-component/FunctionalComponent';
+import FunctionalComponentCode from './components/functional-component/FunctionalComponentCode';
 
 class App extends Component {
   render() {
@@ -36,6 +38,9 @@ class App extends Component {
                 <li className="nav-item">
                   <Link className="nav-item btn btn-danger" to="/jsx-restrictions">JSX Restrictions</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-primary" to="/functional-component">Functional Component</Link>
+                </li>
             </ul>
         </nav>
 
@@ -57,6 +62,12 @@ class App extends Component {
           </Route>
           <Route path="/jsx-restrictions">
             <JSXRestrictions />
+          </Route>
+          <Route path="/functional-component/code">
+            <FunctionalComponentCode />
+          </Route>
+          <Route path="/functional-component">
+            <FunctionalComponent />
           </Route>
           <Route path="/">
             <Home />
