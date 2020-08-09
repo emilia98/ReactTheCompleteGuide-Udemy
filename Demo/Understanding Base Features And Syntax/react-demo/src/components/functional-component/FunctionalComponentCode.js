@@ -18,7 +18,7 @@ class FunctionalComponentCode extends Component {
                             &nbsp;&nbsp;return (
                         </code>
                         <code className="code">
-                            &nbsp;&nbsp;&nbsp;&nbsp; {("<h3>I'm a Person</h3>")}
+                            &nbsp;&nbsp;&nbsp;&nbsp; {("<h3>I'm a Person!</h3>")}
                         </code>
                         <code className="code">
                             &nbsp;&nbsp; {(")")}

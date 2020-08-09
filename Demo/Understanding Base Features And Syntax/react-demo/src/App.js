@@ -17,6 +17,7 @@ import JSXRestrictions from './components/jsx-restrictions/JSXRestrictions';
 import FunctionalComponent from './components/functional-component/FunctionalComponent';
 import FunctionalComponentCode from './components/functional-component/FunctionalComponentCode';
 import ReusingComponent from './components/reusing-component/ReusingComponent';
+import DynamicComponent from './components/dynamic-component/DynamicComponent';
 
 class App extends Component {
   render() {
@@ -44,6 +45,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-item btn btn-info" to="/reusing-component">Reusing Component</Link> 
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-success" to="/dynamic-component">Dynamic Component</Link>
                 </li>
             </ul>
         </nav>
@@ -75,6 +79,9 @@ class App extends Component {
           </Route>
           <Route path="/reusing-component">
             <ReusingComponent />
+          </Route>
+          <Route path="/dynamic-component">
+            <DynamicComponent/>
           </Route>
           <Route path="/">
             <Home />
