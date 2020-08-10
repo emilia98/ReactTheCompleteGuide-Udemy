@@ -18,6 +18,10 @@ import FunctionalComponent from './components/functional-component/FunctionalCom
 import FunctionalComponentCode from './components/functional-component/FunctionalComponentCode';
 import ReusingComponent from './components/reusing-component/ReusingComponent';
 import DynamicComponent from './components/dynamic-component/DynamicComponent';
+import WorkingWithProps from './components/working-with-props/WorkingWithProps';
+import WorkingWithPropsCode from './components/working-with-props/WorkingWithPropsCode';
+import ChildrenProps from './components/ChildrenProps/ChildrenProps';
+import ChildrenPropsCode from './components/ChildrenProps/ChildrenPropsCode';
 
 class App extends Component {
   render() {
@@ -48,6 +52,12 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-item btn btn-success" to="/dynamic-component">Dynamic Component</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-warning" to="/working-with-props">Working With Props</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-danger" to="/children-props">Children Props</Link>
                 </li>
             </ul>
         </nav>
@@ -82,6 +92,18 @@ class App extends Component {
           </Route>
           <Route path="/dynamic-component">
             <DynamicComponent/>
+          </Route>
+          <Route path="/working-with-props/code">
+            <WorkingWithPropsCode />
+          </Route>
+          <Route path="/working-with-props">
+            <WorkingWithProps />
+          </Route>
+          <Route path="/children-props/code">
+            <ChildrenPropsCode />
+          </Route>
+          <Route path="/children-props">
+            <ChildrenProps />
           </Route>
           <Route path="/">
             <Home />
