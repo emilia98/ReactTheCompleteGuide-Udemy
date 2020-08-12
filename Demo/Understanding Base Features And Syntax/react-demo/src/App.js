@@ -24,6 +24,8 @@ import ChildrenProps from './components/children-props/ChildrenProps';
 import ChildrenPropsCode from './components/children-props/ChildrenPropsCode';
 import UnderstandingState from './components/understanding-state/UnderstandingState';
 import UnderstandingStateCode from './components/understanding-state/UnderstandingStateCode';
+import HandlingEvents from './components/handling-events/HandlingEvents';
+import HandlingEventsCode from './components/handling-events/HandlingEventsCode';
 
 class App extends Component {
   render() {
@@ -63,6 +65,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-item btn btn-primary" to="/understanding-state">Understanding State</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-info" to="/handling-events">Handling Events</Link>
                 </li>
             </ul>
         </nav>
@@ -115,6 +120,12 @@ class App extends Component {
           </Route>
           <Route path="/understanding-state">
             <UnderstandingState />
+          </Route>
+          <Route path="/handling-events/code">
+            <HandlingEventsCode />
+          </Route>
+          <Route path="/handling-events">
+            <HandlingEvents />
           </Route>
           <Route path="/">
             <Home />
