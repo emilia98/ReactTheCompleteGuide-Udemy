@@ -5,9 +5,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Person />
-      <Person />
-      <Person />
+      <Person name="Emilia" age="22"/>
+      <Person name="Max" age="28"/>
+      <Person name="Manu" age="29">My hobbies: Racing</Person>
     </div>
   );
 }
