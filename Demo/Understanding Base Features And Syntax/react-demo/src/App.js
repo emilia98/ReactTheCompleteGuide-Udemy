@@ -20,8 +20,10 @@ import ReusingComponent from './components/reusing-component/ReusingComponent';
 import DynamicComponent from './components/dynamic-component/DynamicComponent';
 import WorkingWithProps from './components/working-with-props/WorkingWithProps';
 import WorkingWithPropsCode from './components/working-with-props/WorkingWithPropsCode';
-import ChildrenProps from './components/ChildrenProps/ChildrenProps';
-import ChildrenPropsCode from './components/ChildrenProps/ChildrenPropsCode';
+import ChildrenProps from './components/children-props/ChildrenProps';
+import ChildrenPropsCode from './components/children-props/ChildrenPropsCode';
+import UnderstandingState from './components/understanding-state/UnderstandingState';
+import UnderstandingStateCode from './components/understanding-state/UnderstandingStateCode';
 
 class App extends Component {
   render() {
@@ -58,6 +60,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-item btn btn-danger" to="/children-props">Children Props</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-primary" to="/understanding-state">Understanding State</Link>
                 </li>
             </ul>
         </nav>
@@ -104,6 +109,12 @@ class App extends Component {
           </Route>
           <Route path="/children-props">
             <ChildrenProps />
+          </Route>
+          <Route path="/understanding-state/code">
+            <UnderstandingStateCode />
+          </Route>
+          <Route path="/understanding-state">
+            <UnderstandingState />
           </Route>
           <Route path="/">
             <Home />
