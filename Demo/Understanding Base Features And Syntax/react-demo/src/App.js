@@ -26,6 +26,8 @@ import UnderstandingState from './components/understanding-state/UnderstandingSt
 import UnderstandingStateCode from './components/understanding-state/UnderstandingStateCode';
 import HandlingEvents from './components/handling-events/HandlingEvents';
 import HandlingEventsCode from './components/handling-events/HandlingEventsCode';
+import ManipulatingState from './components/manipulating-state/ManipulatingState';
+import ManipulatingStateCode from './components/manipulating-state/ManipulatingStateCode';
 
 class App extends Component {
   render() {
@@ -68,6 +70,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-item btn btn-info" to="/handling-events">Handling Events</Link>
+                </li>
+                <li className="mav-item">
+                  <Link className="nav-item btn btn-success" to="/manipulating-state">Manipulating State</Link>
                 </li>
             </ul>
         </nav>
@@ -126,6 +131,12 @@ class App extends Component {
           </Route>
           <Route path="/handling-events">
             <HandlingEvents />
+          </Route>
+          <Route path="/manipulating-state/code">
+            <ManipulatingStateCode />
+          </Route>
+          <Route path="/manipulating-state">
+            <ManipulatingState />
           </Route>
           <Route path="/">
             <Home />
