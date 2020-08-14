@@ -30,3 +30,11 @@ code.code {
     width: 80%;
     margin: 0 auto;
 }
+
+.navbar-nav.row-break {
+    flex-wrap: wrap;
+}
+
+.navbar-nav.row-break li {
+    margin-bottom: 10px;
+}

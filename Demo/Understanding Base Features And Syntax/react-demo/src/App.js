@@ -36,50 +36,49 @@ class App extends Component {
     return (
       <Router>
         <nav className="navbar navbar-expand-lg navigation">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav row-break">
                 <li className="nav-item">
-                    <Link className="nav-item btn btn-primary" to="/">Home</Link>
+                    <Link className="nav-link btn btn-primary" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-info" to="/create-react-app">Create React App</Link>
+                  <Link className="nav-link btn btn-info" to="/create-react-app">Create React App</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-success" to="/simple-component">Simple Component</Link>
+                  <Link className="nav-link btn btn-success" to="/simple-component">Simple Component</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-warning" to="/understanding-jsx">Understanding JSX</Link>
+                  <Link className="nav-link btn btn-warning" to="/understanding-jsx">Understanding JSX</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-danger" to="/jsx-restrictions">JSX Restrictions</Link>
+                  <Link className="nav-link btn btn-danger" to="/jsx-restrictions">JSX Restrictions</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-primary" to="/functional-component">Functional Component</Link>
+                  <Link className="nav-link btn btn-primary" to="/functional-component">Functional Component</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-info" to="/reusing-component">Reusing Component</Link> 
+                  <Link className="nav-link btn btn-info" to="/reusing-component">Reusing Component</Link> 
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-success" to="/dynamic-component">Dynamic Component</Link>
+                  <Link className="nav-link btn btn-success" to="/dynamic-component">Dynamic Component</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-warning" to="/working-with-props">Working With Props</Link>
+                  <Link className="nav-link btn btn-warning" to="/working-with-props">Working With Props</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-danger" to="/children-props">Children Props</Link>
+                  <Link className="nav-link btn btn-danger" to="/children-props">Children Props</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-primary" to="/understanding-state">Understanding State</Link>
+                  <Link className="nav-link btn btn-primary" to="/understanding-state">Understanding State</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-info" to="/handling-events">Handling Events</Link>
+                  <Link className="nav-link btn btn-info" to="/handling-events">Handling Events</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-success" to="/manipulating-state">Manipulating State</Link>
+                  <Link className="nav-link btn btn-success" to="/manipulating-state">Manipulating State</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-item btn btn-warning" to="/react-hooks">React Hooks</Link>
+                  <Link className="nav-link btn btn-warning" to="/react-hooks">React Hooks</Link>
                 </li>
-
             </ul>
         </nav>
 
