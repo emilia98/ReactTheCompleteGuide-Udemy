@@ -28,6 +28,8 @@ import HandlingEvents from './components/handling-events/HandlingEvents';
 import HandlingEventsCode from './components/handling-events/HandlingEventsCode';
 import ManipulatingState from './components/manipulating-state/ManipulatingState';
 import ManipulatingStateCode from './components/manipulating-state/ManipulatingStateCode';
+import ReactHooks from './components/react-hooks/ReactHooks';
+import ReactHooksCode from './components/react-hooks/ReactHooksCode';
 
 class App extends Component {
   render() {
@@ -71,9 +73,13 @@ class App extends Component {
                 <li className="nav-item">
                   <Link className="nav-item btn btn-info" to="/handling-events">Handling Events</Link>
                 </li>
-                <li className="mav-item">
+                <li className="nav-item">
                   <Link className="nav-item btn btn-success" to="/manipulating-state">Manipulating State</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-item btn btn-warning" to="/react-hooks">React Hooks</Link>
+                </li>
+
             </ul>
         </nav>
 
@@ -131,6 +137,12 @@ class App extends Component {
           </Route>
           <Route path="/handling-events">
             <HandlingEvents />
+          </Route>
+          <Route path="/react-hooks/code">
+            <ReactHooksCode />
+          </Route>
+          <Route path="/react-hooks">
+            <ReactHooks />
           </Route>
           <Route path="/manipulating-state/code">
             <ManipulatingStateCode />
