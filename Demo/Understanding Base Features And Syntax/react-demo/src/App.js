@@ -30,6 +30,8 @@ import ManipulatingState from './components/manipulating-state/ManipulatingState
 import ManipulatingStateCode from './components/manipulating-state/ManipulatingStateCode';
 import ReactHooks from './components/react-hooks/ReactHooks';
 import ReactHooksCode from './components/react-hooks/ReactHooksCode';
+import PassingMethodReferences from './components/passing-method-references/PassingMethodReferences';
+import PassingMethodReferencesCode from './components/passing-method-references/PassingMethodReferencesCode';
 
 class App extends Component {
   render() {
@@ -78,6 +80,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link btn btn-warning" to="/react-hooks">React Hooks</Link>
+                </li>
+                <li className="nav-tem">
+                  <Link className="nav-link btn btn-danger" to="/passing-method-references">Passing Method References</Link>
                 </li>
             </ul>
         </nav>
@@ -148,6 +153,12 @@ class App extends Component {
           </Route>
           <Route path="/manipulating-state">
             <ManipulatingState />
+          </Route>
+          <Route path="/passing-method-references/code">
+            <PassingMethodReferencesCode />
+          </Route>
+          <Route path="/passing-method-references">
+            <PassingMethodReferences />
           </Route>
           <Route path="/">
             <Home />
