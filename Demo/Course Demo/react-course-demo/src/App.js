@@ -1,40 +1,56 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import Person from './Person/Person';
 import './App.css';
 
-const App = props => {
-  const [personsState, setPersonsState] = useState({
+class App extends Component {
+  state = {
     persons: [
       { name: 'Emilia', age: 22 },
       { name: 'Max', age: 28 },
       { name: 'Manu', age: 29 }
     ],
     otherState: 'some other state'
-  });
+  }
 
-  const [anotherState, setAnotherState] = useState('anotherValue');
-
-  console.log(personsState, anotherState);
-
-  const switchNamesHandler = () => {
-    setPersonsState({
+  switchNamesHandler = (newName) => {
+    this.setState({
       persons: [
-        { name: 'Emi', age: 22 },
+        { name: newName, age: 22 },
         { name: 'Max', age: Math.floor(Math.random() * 30) },
         { name: 'Manu', age: 29 }
       ]
-    })
-    console.log(personsState);
+    });
   }
 
-  return (
-    <div className="App">
-      <button onClick={switchNamesHandler}>Switch Names</button>
-      <Person name={personsState.persons[0].name} age={personsState.persons[0].age} />
-      <Person name={personsState.persons[1].name} age={personsState.persons[1].age} />
-      <Person name={personsState.persons[2].name} age={personsState.persons[2].age}>My hobbies: Racing</Person>
-    </div>
-  )
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        { name: event.target.value, age: 22 },
+        { name: 'Max', age: Math.floor(Math.random() * 30) },
+        { name: 'Manu', age: 29 }
+      ]
+    });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <button onClick={() => this.switchNamesHandler('Emi!')}>Switch Names</button>
+        <Person 
+          name={this.state.persons[0].name} 
+          age={this.state.persons[0].age} 
+          click={this.switchNamesHandler.bind(this, 'Emilia!')}
+          change={this.nameChangedHandler}
+          />
+        <Person 
+          name={this.state.persons[1].name} 
+          age={this.state.persons[1].age} />
+        <Person 
+          name={this.state.persons[2].name} 
+          age={this.state.persons[2].age}>My hobbies: Racing</Person>
+      </div>
+    )
+  }
 }
 
 export default App;
