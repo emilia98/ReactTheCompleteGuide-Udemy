@@ -34,6 +34,8 @@ import PassingMethodReferences from './components/passing-method-references/Pass
 import PassingMethodReferencesCode from './components/passing-method-references/PassingMethodReferencesCode';
 import TwoWayBinding from './components/two-way-binding/TwoWayBinding';
 import TwoWayBindingCode from './components/two-way-binding/TwoWayBindingCode';
+import WorkingWithStylesheets from './components/working-with-stylesheets/WorkingWithStylesheets';
+import WorkingWithStylesheetsCode from './components/working-with-stylesheets/WorkingWithStylesheetsCode';
 
 class App extends Component {
   render() {
@@ -88,6 +90,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link btn btn-primary" to="/two-way-binding">Two Way Binding</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link btn btn-info" to="/working-with-stylesheets">Working With Stylesheets</Link>
                 </li>
             </ul>
         </nav>
@@ -170,6 +175,12 @@ class App extends Component {
           </Route>
           <Route path="/two-way-binding">
             <TwoWayBinding />
+          </Route>
+          <Route path="/working-with-stylesheets/code">
+            <WorkingWithStylesheetsCode />
+          </Route>
+          <Route path="/working-with-stylesheets">
+            <WorkingWithStylesheets />
           </Route>
           <Route path="/">
             <Home />
