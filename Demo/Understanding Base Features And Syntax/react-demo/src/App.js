@@ -36,6 +36,8 @@ import TwoWayBinding from './components/two-way-binding/TwoWayBinding';
 import TwoWayBindingCode from './components/two-way-binding/TwoWayBindingCode';
 import WorkingWithStylesheets from './components/working-with-stylesheets/WorkingWithStylesheets';
 import WorkingWithStylesheetsCode from './components/working-with-stylesheets/WorkingWithStylesheetsCode';
+import InlineStyles from './components/inline-styles/InlineStyles';
+import InlineStylesCode from './components/inline-styles/InlineStylesCode';
 
 class App extends Component {
   render() {
@@ -93,6 +95,9 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link btn btn-info" to="/working-with-stylesheets">Working With Stylesheets</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link btn btn-success" to="/inline-styles">Inline Styles</Link>
                 </li>
             </ul>
         </nav>
@@ -181,6 +186,12 @@ class App extends Component {
           </Route>
           <Route path="/working-with-stylesheets">
             <WorkingWithStylesheets />
+          </Route>
+          <Route path="/inline-styles/code">
+            <InlineStylesCode />
+          </Route>
+          <Route path="/inline-styles">
+            <InlineStyles />
           </Route>
           <Route path="/">
             <Home />

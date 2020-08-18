@@ -58,8 +58,9 @@ class WorkingWithStylesheetsCode extends Component {
                     </ul>
                 </div>
 
-                <div>
+                <div className="w-80">
                     <p>The drawback of importing stylesheets in a component is that the content of the stylesheet is rendered in <code>{('<style></style>')}</code> inside the <code>{('head')}</code> of the root document and the styling will be applied to all the elements, matching the selectors for which we determine the styling rules.</p>
+                    <p>The advantage of styling with stylesheets is that we can use advanced CSS features as hovering over element.</p>
                 </div>
             </div>
         )
@@ -67,7 +68,3 @@ class WorkingWithStylesheetsCode extends Component {
 }
 
 export default WorkingWithStylesheetsCode;
-
-
-            
-         

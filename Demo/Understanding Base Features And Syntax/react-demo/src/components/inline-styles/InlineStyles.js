@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Person from './Person/Person';
 import { Link } from 'react-router-dom';
 
-class WorkingWithStylesheets extends Component {
+class InlineStyles extends Component {
     state = {
         persons: [
             { name: 'Emilia', age: 22 },
@@ -34,11 +34,22 @@ class WorkingWithStylesheets extends Component {
     }
     
     render() {
+        const style = {
+            backgroundColor: 'white',
+            font: 'inherit',
+            border: '1px solid blue',
+            padding: '8px',
+            cursor: 'pointer'
+        };
+
         return (
             <div className="page-container text-center">
-                <h1 className="display-3 page-title">Working With Stylesheets</h1>
-                
-                <button onClick={() => this.switchNamesHandler('Emilia!')} className="mb-3">Switch Names</button>
+                <h1 className="display-3 page-title">Inline Styles</h1>
+
+                <button 
+                    style={style}
+                    onClick={() => this.switchNamesHandler('Emilia!')} 
+                    className="mb-3">Switch Names</button>
 
                 <Person 
                     name={this.state.persons[0].name} 
@@ -54,10 +65,10 @@ class WorkingWithStylesheets extends Component {
                     name={this.state.persons[2].name} 
                     age={this.state.persons[2].age}/>
 
-                <Link className="btn btn-primary mt-3" to="/working-with-stylesheets/code">To Code</Link>                    
+                <Link className="btn btn-primary mt-3" to="/inline-styles/code">To Code</Link>
             </div>
         )
     }
 }
 
-export default WorkingWithStylesheets;
+export default InlineStyles;
