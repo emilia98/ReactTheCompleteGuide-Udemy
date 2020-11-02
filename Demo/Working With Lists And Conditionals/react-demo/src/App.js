@@ -19,6 +19,10 @@ import ListsMutatingStateCode from './components/lists-mutating-state/ListsMutat
 import ListsMutatingState from './components/lists-mutating-state/ListsMutatingState';
 import ListsImmutableStateCode from './components/lists-immutable-state/ListsImmutableStateCode';
 import ListsImmutableState from './components/lists-immutable-state/ListsImmutableState';
+import ListsKeysCode from './components/lists-keys/ListsKeysCode';
+import ListsKeys from './components/lists-keys/ListsKeys';
+import FlexibleListsCode from './components/flexible-lists/FlexibleListsCode';
+import FlexibleLists from './components/flexible-lists/FlexibleLists';
 
 class App extends Component {
   render() {
@@ -43,6 +47,12 @@ class App extends Component {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link btn btn-light" to="/lists-immutable-state">Lists Immutable State</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link btn btn-dark" to="/lists-keys">Lists &amp; Keys</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link btn btn-primary" to="/flexible-lists">Flexible Lists</Link>
                 </li>
             </ul>
         </nav>
@@ -77,6 +87,18 @@ class App extends Component {
           </Route>
           <Route path="/lists-immutable-state">
             <ListsImmutableState />
+          </Route>
+          <Route path="/lists-keys/code">
+            <ListsKeysCode />
+          </Route>
+          <Route path="/lists-keys">
+            <ListsKeys />
+          </Route>
+          <Route path="/flexible-lists/code">
+            <FlexibleListsCode />
+          </Route>
+          <Route path="/flexible-lists">
+            <FlexibleLists />
           </Route>
           <Route path="/">
             <Home />
