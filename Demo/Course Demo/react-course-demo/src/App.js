@@ -5,9 +5,9 @@ import './App.css';
 class App extends Component {
   state = {
     persons: [
-      { name: 'Emilia', age: 22 },
-      { name: 'Max', age: 28 },
-      { name: 'Manu', age: 29 }
+      { id: 'p-1', name: 'Emilia', age: 22 },
+      { id: 'p-2', name: 'Max', age: 28 },
+      { id: 'p-3', name: 'Manu', age: 29 }
     ],
     otherState: 'some other state',
     showPeople: false
@@ -23,13 +23,23 @@ class App extends Component {
     });
   }
 
-  nameChangedHandler = (event) => {
+  nameChangedHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => p.id === id);
+
+    // Shouldn't mutate the object directly, so we copy the object itself
+    // const person = Object.assign({}, this.state.persons[personIndex]);
+    // ES6
+    const person = { 
+      ...this.state.persons[personIndex]
+    };
+
+    person.name = event.target.value;
+
+    const persons = [ ...this.state.persons ];
+    persons[personIndex] = person;
+
     this.setState({
-      persons: [
-        { name: event.target.value, age: 22 },
-        { name: 'Max', age: Math.floor(Math.random() * 30) },
-        { name: 'Manu', age: 29 }
-      ]
+      persons: persons
     });
   }
 
@@ -66,7 +76,9 @@ class App extends Component {
             return <Person
               name={person.name}
               age={person.age}
-              click={() => this.deletePersonHandler(index)}/>
+              click={() => this.deletePersonHandler(index)}
+              key={person.id}
+              change={(event) => this.nameChangedHandler(event, person.id)} />
           })}
         </div>
       );
